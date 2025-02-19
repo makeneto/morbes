@@ -12,7 +12,8 @@ export const fetchPosts = async () => {
     if (response.ok) {
         const data = await response.json()
         return data
-    } else {
+    }
+    else {
         throw new Error('Unable to fetch news')
     }
 }

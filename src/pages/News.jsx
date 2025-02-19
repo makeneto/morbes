@@ -46,7 +46,7 @@ export default function News() {
     return (
         <>
             <Header>
-                <h4>Morbs</h4>
+                <h4>Morbes</h4>
             </Header>
             <NewsPage>
                 <ContainerNews>
