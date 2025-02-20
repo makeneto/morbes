@@ -5,7 +5,7 @@ export const fetchPosts = async () => {
     const yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD')
     const apiKey = 'd96c412525a34b8db90f5f82f561bde5'
 
-    const url = `//newsapi.org/v2/everything?q=tech&from=${yesterday}&to=${today}&sortBy=popularity&apiKey=${apiKey}`
+    const url = `https://newsapi.org/v2/everything?q=tech&from=${yesterday}&to=${today}&sortBy=popularity&apiKey=${apiKey}`
 
     const response = await fetch(url)
 

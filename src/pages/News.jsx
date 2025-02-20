@@ -2,10 +2,39 @@ import { useQuery } from "@tanstack/react-query"
 import { fetchPosts } from "../features/fetchNews"
 import Post from "../ui/Post"
 import styled from "styled-components"
+import { fetchVideos } from "../features/fetchVideos"
+import Video from "../ui/Video"
+import Loader from "../ui/Loader"
 
 const NewsPage = styled.ul`
     background-color: #F0F0F0;
     padding: 1.2rem;
+`
+
+const LatestVideos = styled.div`
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 0.8rem;
+
+    & h1 {
+        font-size: 1.4rem;
+    }
+
+    & .channel__intro {
+        color: gray;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+`
+
+const ContainerVideos = styled.ul`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 13rem);
+    gap: 1.2rem;
+    overflow-x: scroll;
+    margin-top: 0.6rem;
 `
 
 const ContainerNews = styled.ul`
@@ -40,8 +69,15 @@ export default function News() {
         queryFn: fetchPosts,
     })
 
-    if (isPending) return <p>Carregando...</p>
-    if (error) return <p>Erro ao buscar posts!</p>
+    const { data: videos, isPending: isLoading, errors } = useQuery({
+        queryKey: ["videos"],
+        queryFn: fetchVideos,
+    })
+
+    console.log(videos)
+
+    if (isPending || isLoading) return <Loader />
+    if (error || errors) return <p>Erro ao buscar posts!</p>
 
     return (
         <>
@@ -49,6 +85,22 @@ export default function News() {
                 <h4>Morbes</h4>
             </Header>
             <NewsPage>
+                <LatestVideos>
+                    <h1>Explore more</h1>
+                    <p className="channel__intro">Hey, you! Ready to grow? This channel gives you the push to level up! </p>
+
+                    <ContainerVideos>
+                        {videos.items.map((video) => (
+                            <Video
+                                key={video.id.videoId}
+                                videoId={video.id.videoId}
+                                ObjNews={video.snippet}
+                                thumbnails={video.snippet.thumbnails.high.url}
+                            />
+                        ))}
+                    </ContainerVideos>
+                </LatestVideos>
+
                 <ContainerNews>
                     {data.articles?.map((post, index) => (
                         <Post key={index} ObjNews={post} />
