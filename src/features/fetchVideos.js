@@ -16,7 +16,7 @@ export const fetchVideos = async () => {
         apiKey = 'AIzaSyC-RmerxMKXLcAef-nTFo5B73SjahEPFb0'
     }
 
-    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=3&type=video&key=${apiKey}`
+    const url = `/www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&order=date&maxResults=3&type=video&key=${apiKey}`
 
     const response = await fetch(url)
 
