@@ -1,5 +1,5 @@
 # Morbes – O Futuro da Informação Tecnológica
-No ritmo acelerado da tecnologia, a Morbes é sua bússola. Um aplicativo criado para quem quer estar sempre à frente, trazendo notícias de inovação, startups, gadgets, inteligência artificial e tudo o que move o mundo digital.
+No ritmo acelerado das Notícias, a Morbes é sua bússola. Um aplicativo criado para quem quer estar sempre à frente, trazendo notícias de inovação, startups, gadgets, inteligência artificial e tudo o que move o mundo.
 
 Com uma interface elegante e fluida, a Morbes transforma a leitura de notícias em uma experiência envolvente e intuitiva. Personalize seus interesses, receba atualizações em tempo real e mergulhe em análises aprofundadas feitas por especialistas.
 
