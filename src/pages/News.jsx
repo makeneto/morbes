@@ -33,8 +33,13 @@ const ContainerVideos = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, 13rem);
     gap: 1.2rem;
-    overflow-x: scroll;
     margin-top: 0.6rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `
 
 const ContainerNews = styled.ul`
