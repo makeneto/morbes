@@ -74,8 +74,6 @@ export default function News() {
         queryFn: fetchVideos,
     })
 
-    console.log(videos)
-
     if (isPending || isLoading) return <Loader />
     if (error || errors) return <p>Erro ao buscar posts!</p>
 
@@ -103,7 +101,7 @@ export default function News() {
 
                 <ContainerNews>
                     {data.articles?.map((post, index) => (
-                        <Post key={index} ObjNews={post} />
+                        <Post key={index} ObjNews={post} author={post.source.name} />
                     ))}
                 </ContainerNews>
             </NewsPage>
