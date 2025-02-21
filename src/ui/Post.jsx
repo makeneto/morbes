@@ -106,8 +106,8 @@ const ReadMore = styled(Link)`
     }
 `
 
-export default function Post({ ObjNews }) {
-    const { url, title, author, description, publishedAt, urlToImage } = ObjNews
+export default function Post({ author, ObjNews }) {
+    const { url, title, description, content, publishedAt, image } = ObjNews
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     useEffect(() => {
@@ -124,7 +124,7 @@ export default function Post({ ObjNews }) {
     }, [])
 
     return (
-        urlToImage && (
+        image && (
             <>
                 {isModalOpen && <Overlay />}
                 <News onClick={() => setIsModalOpen(true)} isDisabled={isModalOpen}>
@@ -134,7 +134,7 @@ export default function Post({ ObjNews }) {
                             <Title>{title}</Title>
                             <Description>{description}</Description>
                         </ContentNews>
-                        <Image src={urlToImage} alt="News Image" loading="lazy" />
+                        <Image src={image} alt="News Image" loading="lazy" />
                     </NewsBlock>
                     <NewsDetails>
                         <PublishedAt>{formatPublishedAt(publishedAt)}</PublishedAt>
@@ -159,8 +159,8 @@ export default function Post({ ObjNews }) {
                                 onClose={handleCloseModal}
                                 title={title}
                                 author={author}
-                                description={description}
-                                image={urlToImage}
+                                description={content}
+                                image={image}
                                 publishedAt={formatPublishedAt(publishedAt)}
                             />
                         </motion.div>
