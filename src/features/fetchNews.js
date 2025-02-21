@@ -1,11 +1,21 @@
-import moment from 'moment'
+import moment from "moment"
 
 export const fetchPosts = async () => {
-    const today = moment().format('YYYY-MM-DD')
-    const yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD')
-    const apiKey = 'd96c412525a34b8db90f5f82f561bde5'
+    const now  = moment()
+    const time = now.hour()
+    let apiKey
+    const maxNews = 100
+    const category = 'technology'
+    const country = 'us'
+    const lang = 'en'
 
-    const url = `/newsapi.org/v2/everything?q=tech&from=${yesterday}&to=${today}&sortBy=popularity&apiKey=${apiKey}`
+    if (time < 12) {
+        apiKey = '72f2384b8fabd497fe835e37b095c28c'
+    } else {
+        apiKey = '87b64addfaf3b5b49df762bb34e03262'
+    }
+
+    const url = `https://gnews.io/api/v4/search?q=example&lang=${lang}&country=${country}&max=${maxNews}&apikey=${apiKey}&category=${category}`
 
     const response = await fetch(url)
 
@@ -18,5 +28,7 @@ export const fetchPosts = async () => {
     }
 }
 
-// 1 apiKey = 4a411cb1955c44b29e7ca8e57ccd198c
-// 2 apiKey = d96c412525a34b8db90f5f82f561bde5
+// 1 apiKey = 72f2384b8fabd497fe835e37b095c28c
+// 2 apiKey = 87b64addfaf3b5b49df762bb34e03262
+
+// https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=100&apikey=72f2384b8fabd497fe835e37b095c28c&category=technology
