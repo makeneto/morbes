@@ -1,4 +1,4 @@
-#Morbes – The Future of Information
+# Morbes – The Future of Information
 
 In the fast-paced world of news, Morbes is your compass. An app created for those who want to stay ahead, bringing you news about innovation, startups, gadgets, artificial intelligence, and everything that moves the world.
 
