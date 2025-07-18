@@ -1,8 +1,9 @@
-# Morbes – O Futuro da Informação
-No ritmo acelerado das Notícias, a Morbes é sua bússola. Um aplicativo criado para quem quer estar sempre à frente, trazendo notícias de inovação, startups, gadgets, inteligência artificial e tudo o que move o mundo.
+#Morbes – The Future of Information
 
-Com uma interface elegante e fluida, a Morbes transforma a leitura de notícias em uma experiência envolvente e intuitiva. Personalize seus interesses, receba atualizações em tempo real e mergulhe em análises aprofundadas feitas por especialistas.
+In the fast-paced world of news, Morbes is your compass. An app created for those who want to stay ahead, bringing you news about innovation, startups, gadgets, artificial intelligence, and everything that moves the world.
 
-Porque a tecnologia não espera – e a informação certa faz toda a diferença. 🚀
+With an elegant and fluid interface, Morbes transforms news reading into an engaging and intuitive experience. Customize your interests, receive real-time updates, and delve into in-depth analysis by experts.
+
+Because technology doesn't wait – and the right information makes all the difference. 🚀
 
 ![Image](https://github.com/user-attachments/assets/f4a417d6-5e9b-4acb-9a9d-c498aad0ae54)
